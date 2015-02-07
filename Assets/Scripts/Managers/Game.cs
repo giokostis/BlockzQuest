@@ -60,6 +60,10 @@ public class Game{
 		//Player ID
 		ID = Random.Range(0,1000000).ToString();
 		PlayerPrefs.SetString("ID",ID);
+
+		Initialize();
+
+
 	}
 
 	void Initialize()

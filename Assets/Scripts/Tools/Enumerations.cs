@@ -7,3 +7,10 @@ public enum swype
 	left,
 	right
 }
+
+public enum tileType
+{
+	grass,
+	stone,
+	wood
+}
