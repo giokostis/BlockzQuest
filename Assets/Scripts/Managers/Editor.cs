@@ -7,15 +7,11 @@ public class Editor : MonoBehaviour {
 
 	void Start () 
 	{
-		Tile tile;
+	
+		Tile tile = ((GameObject)Instantiate(tilePrefab,new Vector2(0,0),Quaternion.identity)).GetComponent<Tile>();
+		tile.Init(new Vector2(0,0),tileType.stone);
 
-		GameObject jim = (GameObject)Instantiate(tilePrefab);
-		//((GameObject)Instantiate(lvlPrefab,lvlPos.transform.position,Quaternion.identity)).GetComponent<Lvl>();
 
-		print ("I made a tile");
-
-		tile = jim.GetComponent<Tile>();
-		tile.Init(new Vector2(1,1),tileType.grass);
 	}
 
 }

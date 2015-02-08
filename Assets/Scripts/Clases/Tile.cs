@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Tile : MonoBehaviour {
 
-	Vector2 cords;
-	tileType type;
+	public Vector2 cords;
+	public tileType type;
 	Animator anim;
 
 	GameObject padlock;
@@ -12,12 +12,10 @@ public class Tile : MonoBehaviour {
 	void Awake()
 	{
 		anim = GetComponent<Animator>();
-		print("I am awaken and I am a tile!!");
 	}
 
 	void Start()
 	{
-		print("I staerted and I am a tile!!");
 	}
 
 	public void Init(Vector2 newCords, tileType newType)
@@ -30,6 +28,7 @@ public class Tile : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		print("My type is:"+type);
+		transform.localPosition = Camera.main.ScreenToWorldPoint(new Vector3(0,0,10));
+		print(Camera.main.WorldToScreenPoint(transform.localPosition));
 	}
 }
